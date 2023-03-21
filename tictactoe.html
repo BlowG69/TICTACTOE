@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			font-family: 'Roboto', sans-serif;
+		}
+				td {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			text-align: center;
+			font-size: 50px;
+			line-height: 100px;
+			cursor: pointer;
+		}
+		#board{
+			width: 350px;
+			height: 100px;
+			border: 5px solid #D8D8D8;
+			background-color: #B46060;
+		}
+		h1{
+			
+			color:#245953;
+		}
+		p{
+			color:#408E91;
+			font-size: 20px;
+		}
+		button {
+      width: 100px;
+      height: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 10px;
+      background-color: #E49393;
+      border: 0px;
+      color: #D8D8D8;
+
+    }
+    body{
+    	background-color:#867070;
+    }
+
+	</style>
+
+</head>
+
+
+
+
+
+<body>
+	<center>
+
+		<h1>TIC-TAC-TOE GAME</h1>
+		<p>PLAYER 1: X</p>
+		<p>PLAYER 2: O</p>
+
+		<table id="board">
+		<tr>
+			<td class = "box" id = "box1"></td>
+			<td class = "box" id = "box2"></td>
+			<td class = "box" id = "box3"></td>
+		</tr>
+		<tr>
+			<td class = "box" id = "box4"></td>
+			<td class = "box" id = "box5"></td>
+			<td class = "box" id = "box6"></td>
+		</tr>
+		<tr>
+			<td class = "box" id = "box7"></td>
+			<td class = "box" id = "box8"></td>
+			<td class = "box" id = "box9"></td>
+		</tr>
+	</table>
+	<br>
+	  <button id="reset-button">Reset</button>
+</center>
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript">
+	
+$(document).ready(function() {
+  var click = 0;
+  
+  $('.box').click(function() {
+    click++;
+    if (click == 1) {
+      $(this).html('X');
+    } else if (click == 2) {
+      $(this).html('O');
+      click = 0;
+    }
+  });
+});
+
+
+document.getElementById('reset-button').addEventListener('click', function() {
+  location.reload();
+});
+
+
+
+
+	
+</script>
+</html>
